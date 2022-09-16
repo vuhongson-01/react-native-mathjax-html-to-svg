@@ -116,7 +116,11 @@ const GenerateTextComponent = ({ fontSize, color, index, item, parentStyle = nul
                     )
                     : (
                         item?.kind === 'mjx-container' ?
-                            <GenerateSvgComponent item={item} fontSize={fontSize} color={color}/>
+                            <View style={{ 
+                                justifyContent: 'center'
+                            }}>
+                                <GenerateSvgComponent item={item} fontSize={fontSize} color={color}/>
+                            </View>
                             :
                             (
                                 item.children?.length ?
